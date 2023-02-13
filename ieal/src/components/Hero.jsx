@@ -8,16 +8,22 @@ import  styled  from "styled-components";
 export const Hero = () =>{
     return(
         <>
+        <HeroStyle>
             <TitleStyle>Ieal</TitleStyle>
-            <p>Who are you?</p>
-            
+            <MesseageStyle>Who are you?</MesseageStyle>
+        </HeroStyle>
             <BrowserRouter>
+            <LinkStyle>
+                <SelectStyle>
+                    <Link to="/husband">Husband</Link>
+                </SelectStyle>
+                <br />
+                <SelectStyle>
+                    <Link to="/wife">Wife</Link>
+                </SelectStyle>
+            </LinkStyle>
     
-            <Link to="/husband">Husband</Link>
-            <br />
-            <Link to="/wife">Wife</Link>
-    
-        
+
             <Routes> 
                 <Route path="/husband" element={<Husband />} />
                 <Route path="/wife" element={<Wife />} />
@@ -28,7 +34,29 @@ export const Hero = () =>{
     );
 };
 
-const TitleStyle = styled.h1`
-  color: red;
-  text-align: center;
+const HeroStyle = styled.div`
+  background-color: #D3AC2B;
 `;
+
+const TitleStyle = styled.h1`
+  color: #333d51;
+  text-align: center;
+  font-size:50px;
+  margin:0px;
+`;
+
+const MesseageStyle = styled.p`
+  color: #333d51;
+  text-align: center;
+  font-size:28px;
+  margin:0px;
+  `;
+
+  const LinkStyle = styled.div`
+    display:flex;
+    justify-content: space-around;
+  `;
+
+  const SelectStyle = styled.div`
+    width:500px;
+  `;
