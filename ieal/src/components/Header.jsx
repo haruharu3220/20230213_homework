@@ -7,10 +7,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function ButtonAppBar() {
+
+export default function Header() {
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ 
+      <AppBar position="static" style={{
         color: "#333d51",
         fontSize: "50px",
         backgroundColor: "#CBD0D8" }}>

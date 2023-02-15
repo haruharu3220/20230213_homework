@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import { Wife } from '../pages/wife';
-import { Husband } from '../pages/husband';
-import { BrowserRouter, Routes, Route, Link,  } from "react-router-dom";
+import * as React from 'react';
 import  styled  from "styled-components";
 
 
 export const Footer = () =>{
-    return(
-        <>
-            
-        </>
-    );
+  return (
+    <PStyle>© 2023 Hayaharu aaa123</PStyle>
+  );
 };
 
-const TitleStyle = styled.h1`
-  color: red;
-  text-align: center;
+const PStyle = styled.p`
+    background-color: #CBD0D8;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    padding: 30px 0;
 `;

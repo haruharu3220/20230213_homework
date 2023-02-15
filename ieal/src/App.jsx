@@ -14,16 +14,16 @@ const App = () => {
   // const onclickDetailA = () => history.push("pages/wife");
 
   return (
-    <>
-      <Header />
-      <Hero />
-      
-      <p>kitchin</p>
-      <p>bath</p>
-      <p>washRoom</p>
-      <p>FC</p>
-      <Footer />
-     </>
+    <BodyStyle>
+        <Header />
+        <Hero />
+        
+        <p>kitchin</p>
+        <p>bath</p>
+        <p>washRoom</p>
+        <p>FC</p>
+        <Footer />
+    </BodyStyle>
   );
 };
 
@@ -34,5 +34,8 @@ const TitleStyle = styled.h1`
   text-align: center;
 `;
 
+const BodyStyle = styled.div`
+  min-height: 100vh;
+`;
 
 export default App

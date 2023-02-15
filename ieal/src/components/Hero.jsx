@@ -9,35 +9,33 @@ import { Button, ButtonGroup, ChakraProvider } from '@chakra-ui/react';
 export const Hero = () =>{
     return(
         <>
-        <HeroStyle>
-            <TitleStyle>Ieal</TitleStyle>
-            <MesseageStyle>Who are you?</MesseageStyle>
-        </HeroStyle>
+            <HeroStyle>
+                <TitleStyle>Ieal</TitleStyle>
+                <MesseageStyle>Who are you?</MesseageStyle>
+            </HeroStyle>
             <BrowserRouter>
-            <LinkStyle>
-                <ChakraProvider>
-                    <Button colorScheme='blue'>
-                        <Link to="/husband">Husband</Link>
-                    </Button>
-                    <Button colorScheme='pink'>
-                        <Link to="/wife">Wife</Link>
-                    </Button>
-                </ChakraProvider>
-            </LinkStyle>
-    
-
-            <Routes> 
-                <Route path="/husband" element={<Husband />} />
-                <Route path="/wife" element={<Wife />} />
-            </Routes>
+                <LinkStyle>
+                    <ChakraProvider>
+                        <Button colorScheme='blue'>
+                            <Link to="/husband">Husband</Link>
+                        </Button>
+                        <Button colorScheme='pink'>
+                            <Link to="/wife">Wife</Link>
+                        </Button>
+                    </ChakraProvider>
+                </LinkStyle>
+                <Routes>
+                    <Route path="/husband" element={<Husband />} />
+                    <Route path="/wife" element={<Wife />} />
+                </Routes>
             </BrowserRouter>
-
         </>
     );
 };
 
 const HeroStyle = styled.div`
-  background-color: #D3AC2B;
+    background-color: #D3AC2B;
+    padding: 18px;
 `;
 
 const TitleStyle = styled.h1`
@@ -57,6 +55,7 @@ const MesseageStyle = styled.p`
 const LinkStyle = styled.div`
     display:flex;
     justify-content: space-around;
+    padding: 18px;
   `;
 
 const SelectStyle = styled.div`
