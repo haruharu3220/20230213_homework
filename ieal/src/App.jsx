@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import  styled  from "styled-components";
 import { PrimaryButton } from './components/atoms/button/PrimaryButton';
 import { SecondButton } from './components/atoms/button/SecondButton';
+import { SearchInput } from './components/molecules/SearchInput';
 
 const App = () => {
 
@@ -21,6 +22,8 @@ const App = () => {
         <Hero />
         {/* <PrimaryButton>テスト</PrimaryButton>
         <SecondButton>だよ</SecondButton> */}
+        <br />
+        <SearchInput/>
         {/* <p>kitchin</p>
         <p>bath</p>
         <p>washRoom</p>
