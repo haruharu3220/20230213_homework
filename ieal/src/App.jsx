@@ -8,6 +8,8 @@ import { Hero }  from './components/Hero';
 import Header from './components/Header';
 import { Footer } from './components/Footer';
 import  styled  from "styled-components";
+import { PrimaryButton } from './components/atoms/button/PrimaryButton';
+import { SecondButton } from './components/atoms/button/SecondButton';
 
 const App = () => {
 
@@ -17,11 +19,12 @@ const App = () => {
     <BodyStyle>
         <Header />
         <Hero />
-        
-        <p>kitchin</p>
+        {/* <PrimaryButton>テスト</PrimaryButton>
+        <SecondButton>だよ</SecondButton> */}
+        {/* <p>kitchin</p>
         <p>bath</p>
         <p>washRoom</p>
-        <p>FC</p>
+        <p>FC</p> */}
         <Footer />
     </BodyStyle>
   );
