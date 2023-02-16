@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import  styled  from "styled-components";
 
-export const Chat = ({ user, selectedUser }) =>{
+export const Chat = ({ user }) =>{
+    console.log("読み込んでます".user);
   const [message, setMessage] = useState('');
-  const [toMe, setToMe] = useState(false);
   const [messages, setMessages] = useState([]);
 
   const handleSend = () => {
@@ -14,7 +14,7 @@ export const Chat = ({ user, selectedUser }) =>{
     const newMessage = {
       id: messages.length + 1,
       from: user,
-      to: user="wife" ? "husband" : "wife",
+      to: user==="wife" ? "husband" : "wife",
       text: message,
       date: new Date().toLocaleString(),
       likes: 0,
@@ -24,6 +24,13 @@ export const Chat = ({ user, selectedUser }) =>{
     setMessage('');
     console.log("OK");
   };
+
+
+  const filterMesseage = messages.filter(m => (m.to == user));
+
+
+
+
 
   return (
     <div>
@@ -39,7 +46,7 @@ export const Chat = ({ user, selectedUser }) =>{
       </MesseageStyle>
       <h3>My messages:</h3>
       <ul>
-        {messages.map(m => (
+        {filterMesseage.map(m => (
           <li key={m.id}>
             {/* <p>ID= {m.id}</p> */}
             <p>本文＝{m.text}</p>
@@ -49,6 +56,7 @@ export const Chat = ({ user, selectedUser }) =>{
             <button onClick={() => setMessages(messages.map(msg => msg.id === m.id ? { ...msg, likes: msg.likes + 1 } : msg))}>Like</button>
           </li>
         ))}
+
       </ul>
     </div>
   );

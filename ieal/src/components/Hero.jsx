@@ -23,7 +23,8 @@ export const Hero = () =>{
     return(
         <>
             <HeroStyle>
-                <TitleStyle>Ieal</TitleStyle>
+                <TitleStyle>一人二役チャット</TitleStyle>
+                <MesseageStyle>友達がいなくてもチャットができるから楽しいよ！</MesseageStyle>
                 <MesseageStyle>Who are you?</MesseageStyle>
             </HeroStyle>
             <BrowserRouter>
@@ -42,7 +43,7 @@ export const Hero = () =>{
                     <Route path="/wife" element={<Wife />} />
                 </Routes>
                 {/* <SearchInput/> */}
-                <Chat user={player} selectedUser={1}/>
+                <Chat user={player} />
             </BrowserRouter>
             
 
