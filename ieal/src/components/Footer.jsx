@@ -4,7 +4,7 @@ import  styled  from "styled-components";
 
 export const Footer = () =>{
   return (
-    <PStyle>© 2023 Hayaharu aaa123</PStyle>
+    <PStyle>© 2023 Hayaharu </PStyle>
   );
 };
 

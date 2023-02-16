@@ -6,7 +6,7 @@ export const Wife = () =>{
         <>
             <NameStyle>妻のページ</NameStyle>
             {/* <FirstButton text="garally" /> */}
-            <FirstButton text="FloorMap" />
+            {/* <FirstButton text="FloorMap" /> */}
         </>
 
 

@@ -5,8 +5,8 @@ export const Husband = () =>{
     return(
         <>
             <NameStyle>夫のページ</NameStyle>
-            <FirstButton text="garally" />
-            <FirstButton text="FloorMap" />
+            {/* <FirstButton text="garally" />
+            <FirstButton text="FloorMap" /> */}
         </>
 
 

@@ -11,8 +11,18 @@ import  styled  from "styled-components";
 import { PrimaryButton } from './components/atoms/button/PrimaryButton';
 import { SecondButton } from './components/atoms/button/SecondButton';
 import { SearchInput } from './components/molecules/SearchInput';
+import { CommentCard } from './components/organism/CommentCard';
+import { UserPage } from './pages/Chat';
+
+
+const user = {
+  comment: "テストだよ〜ん",
+  name: "Bさん",
+  image: "https://source.unsplash.com/%E5%86%99%E7%9C%9F/dvifDfIB3W0"
+};
 
 const App = () => {
+
 
   // const onclickDetailA = () => history.push("pages/wife");
 
@@ -20,14 +30,17 @@ const App = () => {
     <BodyStyle>
         <Header />
         <Hero />
-        {/* <PrimaryButton>テスト</PrimaryButton>
-        <SecondButton>だよ</SecondButton> */}
-        <br />
-        <SearchInput/>
+                {/* <PrimaryButton>テスト</PrimaryButton>
+                <SecondButton>だよ</SecondButton> */}
+                {/* <br />
+                <SearchInput/> */}
         {/* <p>kitchin</p>
         <p>bath</p>
         <p>washRoom</p>
         <p>FC</p> */}
+
+        {/* <CommentCard user={user}/> */}
+        <UserPage/>
         <Footer />
     </BodyStyle>
   );
