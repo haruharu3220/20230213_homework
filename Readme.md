@@ -6,7 +6,7 @@
 楽しいチャットライフをお楽しみを！
 
 ## DEMO<br>
-
+https://20230213-homework-a2sixlcd0-haruharu3220.vercel.app/
 
 ## 使い方<br>
 Husbandボタンとwifeボタンがあるのでどちらかを選択する<br>
@@ -27,6 +27,8 @@ Reactの動きを理解することに重きを置き、方針を変換した。
 
 TailwindCSSが効かず、苦戦した。代わりにChakraUIを使用した。<br>
 こっちは動いた。<br>
+
+Vercelを使ってデプロイをした。<br>
 
 ## 苦戦した点<br>
 ルーティングやpropsの受け渡しなどまだまだ理解不十分のところがあるので今後理解をしていきたい。<br>
