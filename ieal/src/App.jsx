@@ -30,17 +30,7 @@ const App = () => {
     <BodyStyle>
         <Header />
         <Hero />
-                {/* <PrimaryButton>テスト</PrimaryButton>
-                <SecondButton>だよ</SecondButton> */}
-                {/* <br />
-                <SearchInput/> */}
-        {/* <p>kitchin</p>
-        <p>bath</p>
-        <p>washRoom</p>
-        <p>FC</p> */}
 
-        {/* <CommentCard user={user}/> */}
-        {/* <Chat userId="UserIdを入力するところ" selectedUser={1}/> */}
         <Footer />
     </BodyStyle>
   );
