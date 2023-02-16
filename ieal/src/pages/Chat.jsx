@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
+import  styled  from "styled-components";
 
-export const Chat = ({ userId, selectedUser }) =>{
+export const Chat = ({ user, selectedUser }) =>{
   const [message, setMessage] = useState('');
   const [toMe, setToMe] = useState(false);
-  const [messages, setMessages] = useState([
-    { id: 1, from: 1, to: 2, text: 'Hello, user 2!', likes: 0 },
-    { id: 2, from: 2, to: 1, text: 'Hi, user 1!', likes: 0 },
-  ]);
-
-  const filteredMessages = messages.filter(m => m.to === selectedUser || m.from === selectedUser);
+  const [messages, setMessages] = useState([]);
 
   const handleSend = () => {
     if (!message) {
@@ -17,35 +13,37 @@ export const Chat = ({ userId, selectedUser }) =>{
 
     const newMessage = {
       id: messages.length + 1,
-      from: selectedUser,
-      to: toMe ? selectedUser : selectedUser === 1 ? 2 : 1,
+      from: user,
+      to: user="wife" ? "husband" : "wife",
       text: message,
+      date: new Date().toLocaleString(),
       likes: 0,
     };
-
+    console.log(newMessage);
     setMessages([...messages, newMessage]);
     setMessage('');
+    console.log("OK");
   };
 
   return (
     <div>
-      <h2>User {userId}</h2>
       <div>
-        <label>
+        {/* <label>
           <input type="checkbox" checked={toMe} onChange={() => setToMe(!toMe)} />
           Send to me
-        </label>
+        </label> */}
       </div>
-      <div>
-        <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
+      <MesseageStyle>
+        <InpurStyle placeholder="メッセージを入力" type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
         <button onClick={handleSend}>Send</button>
-      </div>
+      </MesseageStyle>
       <h3>My messages:</h3>
       <ul>
-        {filteredMessages.map(m => (
+        {messages.map(m => (
           <li key={m.id}>
-            <p>{m.id}</p>
-            <p>{m.text}</p>
+            {/* <p>ID= {m.id}</p> */}
+            <p>本文＝{m.text}</p>
+            <p>送信時刻＝{m.date}</p>
             <p>Likes: {m.likes}</p>
 
             <button onClick={() => setMessages(messages.map(msg => msg.id === m.id ? { ...msg, likes: msg.likes + 1 } : msg))}>Like</button>
@@ -55,3 +53,16 @@ export const Chat = ({ userId, selectedUser }) =>{
     </div>
   );
 }
+
+const MesseageStyle = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+
+
+
+const InpurStyle = styled.input`
+border: 2px solid #000000;
+border-radius: 10px;
+`;

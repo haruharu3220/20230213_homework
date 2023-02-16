@@ -40,7 +40,7 @@ const App = () => {
         <p>FC</p> */}
 
         {/* <CommentCard user={user}/> */}
-        <Chat userId="UserIdを入力するところ" selectedUser={1}/>
+        {/* <Chat userId="UserIdを入力するところ" selectedUser={1}/> */}
         <Footer />
     </BodyStyle>
   );

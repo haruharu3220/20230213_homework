@@ -41,9 +41,8 @@ export const Hero = () =>{
                     <Route path="/husband" element={<Husband />} />
                     <Route path="/wife" element={<Wife />} />
                 </Routes>
-                <SearchInput/>
-                <Chat userId="UserIdを入力するところ" selectedUser={1}/>
-                <p>{player}</p>
+                {/* <SearchInput/> */}
+                <Chat user={player} selectedUser={1}/>
             </BrowserRouter>
             
 
