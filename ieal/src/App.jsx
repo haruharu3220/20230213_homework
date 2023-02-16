@@ -12,7 +12,7 @@ import { PrimaryButton } from './components/atoms/button/PrimaryButton';
 import { SecondButton } from './components/atoms/button/SecondButton';
 import { SearchInput } from './components/molecules/SearchInput';
 import { CommentCard } from './components/organism/CommentCard';
-import { UserPage } from './pages/Chat';
+import { Chat } from './pages/Chat';
 
 
 const user = {
@@ -40,7 +40,7 @@ const App = () => {
         <p>FC</p> */}
 
         {/* <CommentCard user={user}/> */}
-        <UserPage/>
+        <Chat userId="UserIdを入力するところ" selectedUser={1}/>
         <Footer />
     </BodyStyle>
   );

@@ -1,12 +1,25 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
 import { Wife } from '../pages/wife';
 import { Husband } from '../pages/husband';
 import { BrowserRouter, Routes, Route, Link,  } from "react-router-dom";
 import  styled  from "styled-components";
 // import { Button } from '@mui/material';
 import { Button, ButtonGroup, ChakraProvider } from '@chakra-ui/react';
+import { PrimaryButton } from './atoms/button/PrimaryButton';
+import { SearchInput } from './molecules/SearchInput';
+import { Chat } from '../pages/Chat';
 
 export const Hero = () =>{
+
+    const [player, setPlayer] = useState('');
+
+    const selectPlayer = () =>{
+        const className = event.target.className;
+        setPlayer(className);
+        return;
+    }
+
+
     return(
         <>
             <HeroStyle>
@@ -17,10 +30,10 @@ export const Hero = () =>{
                 <LinkStyle>
                     <ChakraProvider>
                         <Button colorScheme='blue'>
-                            <Link to="/husband">Husband</Link>
+                            <Link to="/husband" className="husband" onClick={selectPlayer}>Husband</Link>
                         </Button>
                         <Button colorScheme='pink'>
-                            <Link to="/wife">Wife</Link>
+                            <Link to="/wife" className="wife" onClick={selectPlayer}>Wife</Link>
                         </Button>
                     </ChakraProvider>
                 </LinkStyle>
@@ -28,7 +41,12 @@ export const Hero = () =>{
                     <Route path="/husband" element={<Husband />} />
                     <Route path="/wife" element={<Wife />} />
                 </Routes>
+                <SearchInput/>
+                <Chat userId="UserIdを入力するところ" selectedUser={1}/>
+                <p>{player}</p>
             </BrowserRouter>
+            
+
         </>
     );
 };

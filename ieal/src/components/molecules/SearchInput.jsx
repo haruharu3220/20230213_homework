@@ -4,14 +4,14 @@ import  styled  from "styled-components";
 
 export const SearchInput = () => {
     return(
-        <div>
+        <SBody>
             <SContainer>
-                <Input placeholder="検索条件を入力" />
+                <Input placeholder="メッセージを入力" />
                 <SButtonWrapper>
-                    <PrimaryButton>検索</PrimaryButton>
+                    <PrimaryButton2>送信</PrimaryButton2>
                 </SButtonWrapper>
             </SContainer>
-        </div>
+        </SBody>
 
     );
 
@@ -24,4 +24,17 @@ const SContainer = styled.div`
 
 const SButtonWrapper = styled.div`
     padding-left:8px;
+
+`;
+
+
+const PrimaryButton2 = styled(PrimaryButton)`
+    background-color: red;
+
+`;
+
+const SBody = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;

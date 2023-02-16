@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const UserPage = ({ userId, selectedUser }) =>{
+export const Chat = ({ userId, selectedUser }) =>{
   const [message, setMessage] = useState('');
   const [toMe, setToMe] = useState(false);
   const [messages, setMessages] = useState([
@@ -44,8 +44,10 @@ export const UserPage = ({ userId, selectedUser }) =>{
       <ul>
         {filteredMessages.map(m => (
           <li key={m.id}>
+            <p>{m.id}</p>
             <p>{m.text}</p>
             <p>Likes: {m.likes}</p>
+
             <button onClick={() => setMessages(messages.map(msg => msg.id === m.id ? { ...msg, likes: msg.likes + 1 } : msg))}>Like</button>
           </li>
         ))}
@@ -53,5 +55,3 @@ export const UserPage = ({ userId, selectedUser }) =>{
     </div>
   );
 }
-
-export default UserPage;
